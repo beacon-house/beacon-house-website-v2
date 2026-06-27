@@ -143,14 +143,7 @@ export default function JourneySection() {
           <div className="flex flex-col gap-4 lg:gap-6">
             {grades.map((grade, index) => {
               const isLeft = index % 2 === 0;
-              const dotSize =
-                index === 0
-                  ? "w-8 h-8"
-                  : index === 1
-                    ? "w-11 h-11"
-                    : index === 2
-                      ? "w-12 h-12"
-                      : "w-14 h-14";
+              const dotSize = "w-10 h-10";
               return (
                 <div
                   key={grade.step}
