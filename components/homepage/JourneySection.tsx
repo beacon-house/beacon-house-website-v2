@@ -30,7 +30,7 @@ const grades = [
     title: "Grade 12",
     description:
       "Architect the strongest possible application from the evidence already built.",
-    icon: null,
+    icon: "/grade12-application-architecture-icon.svg",
     isLast: true,
   },
 ];
