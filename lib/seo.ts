@@ -21,11 +21,20 @@ export function buildMetadata({
       url,
       siteName: "Beacon House",
       type: "website",
+      images: [
+        {
+          url: "/bh-ig-logo.png",
+          width: 140,
+          height: 32,
+          alt: "Beacon House",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["/bh-ig-logo.png"],
     },
   };
 }

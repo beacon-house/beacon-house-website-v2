@@ -18,7 +18,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = buildMetadata({
-  title: "Beacon House — Ivy League Admissions Consultancy for Indian Students",
+  title: "Beacon House: Ivy League Admissions Consultancy for Indian Students",
   description:
     "Premium admissions consultancy for selective universities. 730+ Ivy League admits, 159+ Top 10 admits in 2025-26. Founder-supervised strategy, profile building, and candidacy development.",
 });

@@ -22,7 +22,7 @@ const grades = [
     title: "Grade 11",
     description:
       "Prioritise sharply. Strengthen what can still move outcomes.",
-    icon: "/class11-bullseye-with-arrow.svg",
+    icon: "/class11-bullseye-icon.png",
     isLast: false,
   },
   {
