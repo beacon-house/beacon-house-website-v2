@@ -12,6 +12,7 @@ export function buildMetadata({
 }): Metadata {
   const url = `${SITE_URL}${path}`;
   return {
+    metadataBase: new URL(SITE_URL),
     title,
     description,
     alternates: { canonical: url },
