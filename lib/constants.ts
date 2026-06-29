@@ -7,5 +7,6 @@ export const NAV_LINKS = [
   { label: "Why Beacon House", href: "/#why-different" },
   { label: "How We Build", href: "/#how-we-build" },
   { label: "The Journey", href: "/#journey" },
+  { label: "Our Results", href: "/our-results" },
   { label: "FAQs", href: "/#faqs" },
 ] as const;
