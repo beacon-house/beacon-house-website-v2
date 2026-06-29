@@ -3,6 +3,7 @@ import EarlyYearsSection from "@/components/homepage/EarlyYearsSection";
 import WhyDifferentSection from "@/components/homepage/WhyDifferentSection";
 import HowWeBuildSection from "@/components/homepage/HowWeBuildSection";
 import JourneySection from "@/components/homepage/JourneySection";
+import ResultsSection from "@/components/homepage/ResultsSection";
 import FinalCTASection from "@/components/homepage/FinalCTASection";
 import FAQSection from "@/components/homepage/FAQSection";
 import { faqJsonLd } from "@/lib/seo";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <WhyDifferentSection />
       <HowWeBuildSection />
       <JourneySection />
+      <ResultsSection />
       <FinalCTASection />
       <FAQSection />
     </>
