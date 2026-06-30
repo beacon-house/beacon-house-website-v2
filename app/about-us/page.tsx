@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { SITE_URL } from "@/lib/constants";
 import AboutHero from "@/components/about-us/AboutHero";
 import StructuralProblem from "@/components/about-us/StructuralProblem";
+import TheTradeOff from "@/components/about-us/TheTradeOff";
 
 export const metadata: Metadata = {
   title: "About Us | Beacon House",
@@ -23,6 +24,7 @@ export default function AboutUsPage() {
     <main className="flex min-h-screen flex-col w-full">
       <AboutHero />
       <StructuralProblem />
+      <TheTradeOff />
     </main>
   );
 }
