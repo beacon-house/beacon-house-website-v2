@@ -1,28 +1,28 @@
-import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo";
+import { Metadata } from "next";
+import { SITE_URL } from "@/lib/constants";
 import AboutHero from "@/components/about-us/AboutHero";
-import OurStory from "@/components/about-us/OurStory";
-import LeadershipTeam from "@/components/about-us/LeadershipTeam";
-import AdmissionTeam from "@/components/about-us/AdmissionTeam";
-import EducationalApproach from "@/components/about-us/EducationalApproach";
-import ClosingSection from "@/components/about-us/ClosingSection";
+import StructuralProblem from "@/components/about-us/StructuralProblem";
 
-export const metadata: Metadata = buildMetadata({
-  title: "About Us: Beacon House - Ivy League Admissions Experts",
-  description:
-    "Founded at Yale, Beacon House partners with InGenius Prep to bring the world's best admissions resources to Indian students. Meet our founders and team of 150+ Former Admissions Officers.",
-  path: "/about-us",
-});
+export const metadata: Metadata = {
+  title: "About Us | Beacon House",
+  description: "Learn why Beacon House exists and how we help students build distinctive, credible, and coherent applications for the world's most selective universities.",
+  alternates: {
+    canonical: `${SITE_URL}/about-us`,
+  },
+  openGraph: {
+    title: "About Us | Beacon House",
+    description: "Learn why Beacon House exists and how we help students build distinctive, credible, and coherent applications for the world's most selective universities.",
+    url: `${SITE_URL}/about-us`,
+    siteName: "Beacon House",
+    type: "website",
+  },
+};
 
 export default function AboutUsPage() {
   return (
-    <>
+    <main className="flex min-h-screen flex-col w-full">
       <AboutHero />
-      <OurStory />
-      <LeadershipTeam />
-      <AdmissionTeam />
-      <EducationalApproach />
-      <ClosingSection />
-    </>
+      <StructuralProblem />
+    </main>
   );
 }

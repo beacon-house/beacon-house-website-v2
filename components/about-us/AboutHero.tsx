@@ -1,31 +1,58 @@
+import Image from "next/image";
+
 export default function AboutHero() {
   return (
-    <section className="hero-gradient-bg w-full">
-      <div className="max-w-content mx-auto w-full px-6 md:px-8 lg:px-12 pt-[108px] pb-16 md:pt-[130px] md:pb-20 lg:pt-[148px] lg:pb-24">
-        <div className="max-w-[760px] mx-auto text-center">
-          <span className="inline-block font-sans text-[0.65rem] md:text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[var(--bh-slate-text)] mb-4 md:mb-5">
-            About Beacon House
-          </span>
-          <h1
-            className="font-serif font-medium tracking-tight text-[var(--bh-deep-ink)]"
-            style={{
-              fontSize: "clamp(2.5rem, 6vw, 3.75rem)",
-              lineHeight: "1.08",
-            }}
-          >
-            Making your
-            <br className="md:hidden" />{" "}
-            <em className="not-italic text-[var(--bh-warm-amber)]">dreams</em>
-            <br className="hidden md:block" />{" "}
-            come true
-          </h1>
-          <div className="w-10 h-[2px] bg-[var(--bh-warm-amber)] mx-auto mt-7 md:mt-8 mb-5 md:mb-6" />
-          <p className="font-sans text-[var(--bh-slate-text)] text-[1rem] md:text-[1.1rem] leading-[1.7]">
-            Founded at Yale and operating around the globe,
-            <br className="hidden md:block" />{" "}
-            we are the world's leading{" "}
-            <span className="whitespace-nowrap">admissions experts.</span>
-          </p>
+    <section className="bg-ivory pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Left Column - Content */}
+          <div className="max-w-text animate-fade-in-up">
+            <h2 className="text-sm font-bold tracking-[0.15em] text-navy uppercase mb-6">
+              Why We Exist
+            </h2>
+            
+            <h1 className="text-[36px] md:text-5xl lg:text-[52px] leading-[1.15] font-serif font-medium text-deep-ink mb-10">
+              The students competing for the most selective universities are already strong.
+            </h1>
+            
+            <div className="border-l-2 border-amber pl-6 mb-10">
+              <ul className="space-y-4 text-lg md:text-xl text-deep-ink font-medium">
+                <li>They have excellent grades.</li>
+                <li>Rigorous subjects.</li>
+                <li>Serious activities.</li>
+                <li>Ambitious goals.</li>
+              </ul>
+            </div>
+            
+            <div className="space-y-6 text-base md:text-lg text-slate">
+              <p>
+                What separates them is not simply how much they have done.
+              </p>
+              <p>
+                It is whether their choices have developed into a distinctive, credible and coherent applicant.
+              </p>
+              <p className="font-medium text-deep-ink">
+                That requires true <span className="text-amber">personalisation.</span>
+              </p>
+            </div>
+          </div>
+          
+          {/* Right Column - Image */}
+          <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[700px] animate-slide-in-down" style={{ animationDelay: "0.2s" }}>
+            {/* 
+              Placeholder for the diagram image. 
+              The user will provide an image without a frame that fits directly on the background.
+            */}
+            <Image
+              src="/about-us/fold-1.png"
+              alt="Diagram showing how grades, subjects, activities, and goals combine into a distinctive applicant"
+              fill
+              className="object-contain object-center lg:object-right"
+              priority
+            />
+          </div>
+
         </div>
       </div>
     </section>
