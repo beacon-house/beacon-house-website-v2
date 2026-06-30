@@ -1,60 +1,102 @@
-import Image from "next/image";
+import ScrollReveal from "@/components/shared/ScrollReveal";
+
+const effects = [
+  "Students enter common processes.",
+  "Activities come from familiar playbooks.",
+  "Decisions move through layers.",
+  "The most experienced people become further removed from the child.",
+];
 
 export default function StructuralProblem() {
   return (
-    <section className="about-gradient-mist py-16 md:py-24 overflow-hidden">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section
+      className="w-full min-h-[100svh] md:min-h-[100dvh] flex flex-col justify-center overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(circle at 25% 18%, rgba(32, 58, 107, 0.18) 0%, transparent 52%), radial-gradient(circle at 82% 82%, rgba(248, 175, 72, 0.05) 0%, transparent 42%), #14213D",
+      }}
+    >
+      <div className="max-w-content mx-auto w-full px-6 pt-[84px] pb-14 md:px-8 md:pt-[80px] md:pb-12 lg:px-12 lg:pt-[82px] lg:pb-14">
+        <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.82fr)] gap-10 md:gap-12 lg:gap-16">
+          {/* Left: headline + intro */}
+          <div>
+            <ScrollReveal>
+              <span className="inline-block font-sans text-[0.7rem] md:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-warm-amber)] mb-2.5">
+                The Structural Problem
+              </span>
+              <div className="w-8 h-0.5 bg-[var(--bh-warm-amber)] mb-6 md:mb-7" />
+            </ScrollReveal>
 
-          {/* Left Column - Content */}
-          <div className="max-w-text animate-fade-in-up">
-            <h2 className="text-sm font-bold tracking-[0.15em] text-navy uppercase mb-6">
-              The Structural Problem
-            </h2>
+            <ScrollReveal delay={100}>
+              <h2
+                className="font-serif font-medium text-[var(--bh-warm-ivory)] tracking-tight mb-6 md:mb-7"
+                style={{
+                  fontSize: "clamp(1.7rem, 4.2vw, 2.75rem)",
+                  lineHeight: "1.14",
+                }}
+              >
+                Personalisation is also where most counselling models become{" "}
+                <span className="text-[var(--bh-warm-amber)] italic">
+                  weakest
+                </span>
+                .
+              </h2>
+            </ScrollReveal>
 
-            <h1 className="text-[36px] md:text-5xl lg:text-[52px] leading-[1.15] font-serif font-medium text-deep-ink mb-10">
-              Personalisation is also where most counselling models become weakest.
-            </h1>
-
-            <div className="space-y-6 text-base md:text-lg text-slate mb-8">
-              <p>
-                As counselling companies grow, they gain access to stronger systems, larger teams and wider resources.
+            <ScrollReveal delay={200}>
+              <p className="font-sans text-white/60 text-[0.92rem] md:text-[1.02rem] leading-[1.72] max-w-[480px]">
+                As counselling companies grow, they gain access to stronger
+                systems, larger teams and wider resources. But scale creates
+                pressure towards standardisation.
               </p>
-              <p>
-                But scale creates pressure towards standardisation.
-              </p>
-            </div>
-
-            <div className="border-l-2 border-amber pl-6 mb-8">
-              <ul className="space-y-4 text-lg md:text-xl text-deep-ink font-medium">
-                <li>Students enter common processes.</li>
-                <li>Activities come from familiar playbooks.</li>
-                <li>Decisions move through layers.</li>
-                <li>The most experienced people become further removed from the child.</li>
-              </ul>
-            </div>
-
-            <div className="space-y-4 text-base md:text-lg text-slate">
-              <p>
-                The organisation may have impressive resources.
-              </p>
-              <p>
-                Yet the student can still become <span className="text-amber font-medium">lost within the system.</span>
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
 
-          {/* Right Column - Composite Image */}
-          <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[750px] animate-slide-in-down" style={{ animationDelay: "0.2s" }}>
-            <Image
-              src="/about-us/fold-2.png"
-              alt="Diagram showing how scale creates standardisation: stronger systems, larger teams, and wider resources still leave students lost within the system"
-              fill
-              className="object-contain object-center lg:object-right"
-            />
+          {/* Right: 4 effects as descending numbered list */}
+          <div className="flex flex-col">
+            {effects.map((effect, i) => (
+              <ScrollReveal key={effect} delay={300 + i * 100}>
+                <div
+                  className={`flex items-start gap-4 py-4 md:py-[1.35rem] ${
+                    i < effects.length - 1
+                      ? "border-b border-white/[0.07]"
+                      : ""
+                  }`}
+                  style={{ opacity: 1 - i * 0.1 }}
+                >
+                  <span className="font-serif text-[var(--bh-warm-amber)] text-[1.05rem] md:text-[1.15rem] font-medium flex-shrink-0 tabular-nums mt-[0.1rem]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="font-sans text-white/75 text-[0.9rem] md:text-[0.96rem] leading-[1.55]">
+                    {effect}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
-
         </div>
+
+        {/* Closing statement */}
+        <ScrollReveal delay={800}>
+          <div className="mt-12 md:mt-16 lg:mt-20 max-w-[680px] mx-auto text-center">
+            <p className="font-sans text-white/35 text-[0.86rem] md:text-[0.92rem] leading-relaxed mb-3">
+              The organisation may have impressive resources.
+            </p>
+            <p
+              className="font-serif font-medium text-[var(--bh-warm-ivory)] tracking-tight"
+              style={{
+                fontSize: "clamp(1.25rem, 3.2vw, 1.85rem)",
+                lineHeight: "1.25",
+              }}
+            >
+              Yet the student can still become{" "}
+              <span className="text-[var(--bh-warm-amber)] italic">
+                lost within the system
+              </span>
+              .
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,30 +1,38 @@
-import { Metadata } from "next";
-import { SITE_URL } from "@/lib/constants";
-import AboutHero from "@/components/about-us/AboutHero";
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+import WhyWeExist from "@/components/about-us/WhyWeExist";
 import StructuralProblem from "@/components/about-us/StructuralProblem";
 import TheTradeOff from "@/components/about-us/TheTradeOff";
+import TheQuestion from "@/components/about-us/TheQuestion";
+import GlobalResources from "@/components/about-us/GlobalResources";
+import BeaconHouseValue from "@/components/about-us/BeaconHouseValue";
+import HowModelWorks from "@/components/about-us/HowModelWorks";
+import WhatThisMeans from "@/components/about-us/WhatThisMeans";
+import TheExperience from "@/components/about-us/TheExperience";
+import OurCommitment from "@/components/about-us/OurCommitment";
+import FinalCTA from "@/components/about-us/FinalCTA";
 
-export const metadata: Metadata = {
-  title: "About Us | Beacon House",
-  description: "Learn why Beacon House exists and how we help students build distinctive, credible, and coherent applications for the world's most selective universities.",
-  alternates: {
-    canonical: `${SITE_URL}/about-us`,
-  },
-  openGraph: {
-    title: "About Us | Beacon House",
-    description: "Learn why Beacon House exists and how we help students build distinctive, credible, and coherent applications for the world's most selective universities.",
-    url: `${SITE_URL}/about-us`,
-    siteName: "Beacon House",
-    type: "website",
-  },
-};
+export const metadata: Metadata = buildMetadata({
+  title: "About Beacon House: Premium Admissions Advisory for Indian Families",
+  description:
+    "Beacon House was created to remove the trade-off between personal attention and world-class admissions resources. Founder-led judgement, global expertise, one student at a time.",
+  path: "/about-us",
+});
 
 export default function AboutUsPage() {
   return (
-    <main className="flex min-h-screen flex-col w-full">
-      <AboutHero />
+    <>
+      <WhyWeExist />
       <StructuralProblem />
       <TheTradeOff />
-    </main>
+      <TheQuestion />
+      <GlobalResources />
+      <BeaconHouseValue />
+      <HowModelWorks />
+      <WhatThisMeans />
+      <TheExperience />
+      <OurCommitment />
+      <FinalCTA />
+    </>
   );
 }
