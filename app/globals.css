@@ -59,6 +59,36 @@
     }
   }
 
+  .about-gradient-ivory {
+    background:
+      radial-gradient(circle at 90% 18%, rgba(217, 138, 36, 0.11) 0%, rgba(217, 138, 36, 0.03) 34%, transparent 58%),
+      radial-gradient(circle at 12% 88%, rgba(32, 58, 107, 0.1) 0%, rgba(32, 58, 107, 0.03) 32%, transparent 56%),
+      linear-gradient(160deg, #fffbf5 0%, #fff8ef 48%, #f5f8fc 100%);
+  }
+
+  .about-gradient-mist {
+    background:
+      radial-gradient(circle at 84% 20%, rgba(217, 138, 36, 0.09) 0%, rgba(217, 138, 36, 0.02) 34%, transparent 56%),
+      radial-gradient(circle at 16% 90%, rgba(32, 58, 107, 0.09) 0%, rgba(32, 58, 107, 0.025) 34%, transparent 58%),
+      linear-gradient(164deg, #f6f9fd 0%, #f1f6fb 54%, #eef4fa 100%);
+  }
+
+  @media (min-width: 768px) {
+    .about-gradient-ivory {
+      background:
+        radial-gradient(circle at 78% 24%, rgba(217, 138, 36, 0.14) 0%, rgba(217, 138, 36, 0.04) 34%, transparent 56%),
+        radial-gradient(circle at 8% 84%, rgba(32, 58, 107, 0.11) 0%, rgba(32, 58, 107, 0.03) 34%, transparent 56%),
+        linear-gradient(122deg, #fffbf5 0%, #fff8ef 45%, #f3f7fc 100%);
+    }
+
+    .about-gradient-mist {
+      background:
+        radial-gradient(circle at 82% 24%, rgba(217, 138, 36, 0.12) 0%, rgba(217, 138, 36, 0.03) 34%, transparent 58%),
+        radial-gradient(circle at 12% 86%, rgba(32, 58, 107, 0.11) 0%, rgba(32, 58, 107, 0.03) 34%, transparent 56%),
+        linear-gradient(122deg, #f5f9fd 0%, #f1f6fb 52%, #edf4fa 100%);
+    }
+  }
+
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-300;
     background-color: var(--bh-warm-amber);
