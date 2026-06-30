@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function StructuralProblem() {
   return (
-    <section className="bg-blue-mist py-16 md:py-24 overflow-hidden">
+    <section className="about-gradient-mist py-16 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 

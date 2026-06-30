@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutHero() {
   return (
-    <section className="bg-ivory pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+    <section className="about-gradient-ivory pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           

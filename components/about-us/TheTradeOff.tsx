@@ -9,7 +9,7 @@ const requirements = [
 
 export default function TheTradeOff() {
   return (
-    <section className="bg-ivory py-16 md:py-24">
+    <section className="about-gradient-ivory py-16 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
 
         {/* Two-column: headline+body left, requirement cards right */}
