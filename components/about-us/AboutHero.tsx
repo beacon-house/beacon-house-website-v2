@@ -12,7 +12,7 @@ export default function AboutHero() {
               Why We Exist
             </h2>
             
-            <h1 className="text-[36px] md:text-5xl lg:text-[52px] leading-[1.15] font-serif font-medium text-deep-ink mb-10">
+            <h1 className="text-[36px] md:text-[40px] lg:text-[36px] leading-[1.15] font-serif font-medium text-deep-ink mb-10">
               The students competing for the most selective universities are already strong.
             </h1>
             
