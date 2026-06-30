@@ -1,4 +1,6 @@
-const requirements = [
+import ScrollReveal from "@/components/shared/ScrollReveal";
+
+const resources = [
   "Former Admissions Officers",
   "Global admissions intelligence",
   "Course and university specialists",
@@ -7,90 +9,106 @@ const requirements = [
   "Experience across thousands of admissions journeys",
 ];
 
-function CheckIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2.5 6L5 8.5L9.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function StarIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" />
-    </svg>
-  );
-}
-
 export default function TheTradeOff() {
   return (
-    <section className="about-gradient-ivory py-16 md:py-24 overflow-hidden">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <section className="about-gradient-mist relative w-full min-h-[100svh] md:min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+      <div className="max-w-content mx-auto w-full px-6 pt-[84px] pb-14 md:px-8 md:pt-[80px] md:pb-12 lg:px-12 lg:pt-[82px] lg:pb-14">
+        {/* Header */}
+        <div className="max-w-[800px] mx-auto text-center mb-9 md:mb-11">
+          <ScrollReveal>
+            <span className="inline-block font-sans text-[0.7rem] md:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-slate-text)] mb-2.5">
+              The Other Side of the Trade-Off
+            </span>
+            <div className="w-8 h-0.5 bg-[var(--bh-warm-amber)] mx-auto mb-6 md:mb-7" />
+          </ScrollReveal>
 
-        {/* Eyebrow + headline */}
-        <div className="mb-10 md:mb-14 animate-fade-in-up">
-          <h2 className="text-sm font-bold tracking-[0.15em] text-navy uppercase mb-6">
-            The Other Side of the Trade-Off
-          </h2>
-          <p className="text-[30px] md:text-[40px] lg:text-[44px] leading-[1.15] font-serif font-medium text-deep-ink max-w-[820px]">
-            Smaller models can feel more personal. But they may not have the same depth of resources.
-          </p>
+          <ScrollReveal delay={100}>
+            <h2
+              className="font-serif font-medium text-[var(--bh-deep-ink)] tracking-tight mb-5 md:mb-6"
+              style={{
+                fontSize: "clamp(1.6rem, 3.8vw, 2.5rem)",
+                lineHeight: "1.15",
+              }}
+            >
+              Smaller models can feel more personal. But they may not have the{" "}
+              <span className="text-[var(--bh-warm-amber)] italic">
+                same depth of resources
+              </span>
+              .
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <p className="font-sans text-[var(--bh-slate-text)] text-[0.92rem] md:text-[1rem] leading-[1.7] max-w-[560px] mx-auto">
+              A highly involved individual counsellor may understand the student
+              well. But selective international admissions increasingly requires
+              access to:
+            </p>
+          </ScrollReveal>
         </div>
 
-        {/* Body + requirements left, climax right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-
-          {/* Left column */}
-          <div className="space-y-6 text-base md:text-lg text-slate animate-fade-in-up">
-            <p>A highly involved individual counsellor may understand the student well.</p>
-            <p className="font-medium text-deep-ink">
-              But selective international admissions increasingly requires access to:
-            </p>
-            <ul className="space-y-3 mt-2">
-              {requirements.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="flex items-center justify-center w-5 h-5 mt-1 rounded-full bg-amber/10 text-amber shrink-0">
-                    <CheckIcon className="w-3 h-3" />
-                  </span>
-                  <span className="text-deep-ink font-medium text-sm md:text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
+        {/* Resources grid */}
+        <ScrollReveal delay={300}>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-[780px] mx-auto mb-10 md:mb-12">
+            {resources.map((resource) => (
+              <div
+                key={resource}
+                className="flex items-start gap-2.5 bg-white/70 border border-[var(--bh-border-blue-gray)] rounded-lg px-4 py-3.5 md:px-5 md:py-4"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-[var(--bh-warm-amber)] flex-shrink-0 mt-[0.45rem]" />
+                <span className="font-sans text-[0.83rem] md:text-[0.9rem] font-medium text-[var(--bh-navy)] leading-snug">
+                  {resource}
+                </span>
+              </div>
+            ))}
           </div>
+        </ScrollReveal>
 
-          {/* Right column: the forced choice */}
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            <div className="flex flex-col items-center text-center mb-8">
-              <StarIcon className="w-4 h-4 text-amber mb-4" />
-              <div className="w-12 h-px bg-blue-gray mb-6" />
-              <p className="text-[28px] md:text-[36px] leading-[1.15] font-serif font-medium text-deep-ink">
-                Families are often forced to choose.
+        {/* Climax: forced to choose */}
+        <ScrollReveal delay={400}>
+          <div className="text-center mb-7 md:mb-9">
+            <p
+              className="font-serif font-medium text-[var(--bh-navy)] tracking-tight"
+              style={{
+                fontSize: "clamp(1.15rem, 2.6vw, 1.55rem)",
+                lineHeight: "1.3",
+              }}
+            >
+              Families are often forced to choose.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Two choice cards */}
+        <ScrollReveal delay={500}>
+          <div className="flex flex-col md:flex-row items-stretch gap-4 md:gap-6 max-w-[740px] mx-auto">
+            {/* Choice 1 */}
+            <div className="flex-1 bg-white border border-[var(--bh-border-blue-gray)] rounded-xl px-6 py-6 md:px-7 md:py-7">
+              <div className="w-8 h-0.5 bg-[var(--bh-slate-text)]/30 mb-4" />
+              <p className="font-serif font-medium text-[var(--bh-deep-ink)] text-[0.95rem] md:text-[1.05rem] leading-snug">
+                Personal attention without the full depth of resources.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_56px_1fr] items-stretch gap-4 md:gap-0">
-              <div className="border border-blue-gray rounded-lg p-6 md:p-8 bg-blue-mist flex items-center justify-center">
-                <p className="text-lg md:text-xl font-serif font-medium text-deep-ink leading-[1.45] text-center">
-                  Personal attention without the full depth of resources.
-                </p>
-              </div>
-
-              <div className="flex items-center justify-center py-2 md:py-0">
-                <span className="flex items-center justify-center w-10 h-10 rounded-full border border-blue-gray bg-ivory font-serif italic text-slate text-xs shrink-0">
-                  or
+            {/* OR divider */}
+            <div className="flex items-center justify-center flex-shrink-0">
+              <div className="w-11 h-11 rounded-full bg-[var(--bh-warm-ivory)] border border-[var(--bh-border-blue-gray)] flex items-center justify-center shadow-sm">
+                <span className="font-sans text-[0.65rem] font-semibold text-[var(--bh-slate-text)] uppercase tracking-[0.1em]">
+                  Or
                 </span>
               </div>
+            </div>
 
-              <div className="border border-blue-gray rounded-lg p-6 md:p-8 bg-blue-mist flex items-center justify-center">
-                <p className="text-lg md:text-xl font-serif font-medium text-deep-ink leading-[1.45] text-center">
-                  World-class resources within a model that may not remain truly personal.
-                </p>
-              </div>
+            {/* Choice 2 */}
+            <div className="flex-1 bg-white border border-[var(--bh-border-blue-gray)] rounded-xl px-6 py-6 md:px-7 md:py-7">
+              <div className="w-8 h-0.5 bg-[var(--bh-slate-text)]/30 mb-4" />
+              <p className="font-serif font-medium text-[var(--bh-deep-ink)] text-[0.95rem] md:text-[1.05rem] leading-snug">
+                World-class resources within a model that may not remain truly
+                personal.
+              </p>
             </div>
           </div>
-        </div>
-
+        </ScrollReveal>
       </div>
     </section>
   );
