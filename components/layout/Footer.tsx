@@ -1,7 +1,25 @@
+"use client";
+
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { CTA_URL, CTA_LABEL } from "@/lib/constants";
 
+// Pages that already close with their own dedicated final-CTA section
+// immediately before the footer — showing the footer's CTA there too
+// would just repeat the same button the reader saw one scroll above.
+const PATHS_WITH_OWN_FINAL_CTA = ["/about-us", "/our-results", "/our-program"];
+
+function hasOwnFinalCTA(pathname: string) {
+  return (
+    PATHS_WITH_OWN_FINAL_CTA.includes(pathname) ||
+    pathname.startsWith("/case-studies")
+  );
+}
+
 export default function Footer() {
+  const pathname = usePathname();
+  const showCTA = !hasOwnFinalCTA(pathname);
+
   return (
     <footer className="bg-[var(--bh-deep-ink)] text-[var(--bh-warm-ivory)]">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 py-12 md:py-16">
@@ -23,19 +41,21 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="font-serif text-sm font-medium text-[var(--bh-warm-amber)] uppercase tracking-wider">
-              Get Started
-            </h3>
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[var(--bh-warm-amber)] text-[var(--bh-deep-ink)] px-6 py-3 rounded-lg font-sans font-semibold text-[0.95rem] shadow-[0_10px_22px_rgba(20,33,61,0.24),0_3px_0_rgba(20,33,61,0.24)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(20,33,61,0.28),0_4px_0_rgba(20,33,61,0.24)] active:translate-y-[2px] active:shadow-[0_4px_10px_rgba(20,33,61,0.2),0_1px_0_rgba(20,33,61,0.22)]"
-            >
-              {CTA_LABEL}
-            </a>
-          </div>
+          {showCTA && (
+            <div className="flex flex-col gap-4">
+              <h3 className="font-serif text-sm font-medium text-[var(--bh-warm-amber)] uppercase tracking-wider">
+                Get Started
+              </h3>
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[var(--bh-warm-amber)] text-[var(--bh-deep-ink)] px-6 py-3 rounded-lg font-sans font-semibold text-[0.95rem] shadow-[0_10px_22px_rgba(20,33,61,0.24),0_3px_0_rgba(20,33,61,0.24)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(20,33,61,0.28),0_4px_0_rgba(20,33,61,0.22)] active:translate-y-[2px] active:shadow-[0_4px_10px_rgba(20,33,61,0.2),0_1px_0_rgba(20,33,61,0.22)]"
+              >
+                {CTA_LABEL}
+              </a>
+            </div>
+          )}
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
