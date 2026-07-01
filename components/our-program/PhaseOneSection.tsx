@@ -438,42 +438,27 @@ export default function PhaseOneSection() {
         </div>
 
         {/* Timeline of folds */}
-        <div className="relative max-w-[1000px] mx-auto">
+        <div className="relative max-w-[640px] mx-auto">
           {/* Vertical spine */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-[var(--bh-border-blue-gray)] md:-translate-x-1/2" />
+          <div className="absolute left-6 top-0 bottom-0 w-px bg-[var(--bh-border-blue-gray)]" />
 
-          {allFolds.map((fold, index) => {
-            const isLeft = index % 2 === 0;
+          {allFolds.map((fold, index) => (
+            <div key={fold.number} className="relative mb-5 md:mb-6">
+              {/* Timeline dot */}
+              <div className="absolute top-5 left-6 w-3 h-3 rounded-full bg-[var(--bh-navy)] border-2 border-white z-10" />
 
-            return (
-              <div key={fold.number}>
-                <div className="relative mb-6 md:mb-8">
-                  {/* Timeline dot */}
-                  <div className="absolute top-5 left-6 md:left-1/2 w-3 h-3 rounded-full bg-[var(--bh-navy)] border-2 border-white z-10 md:-translate-x-1/2" />
-
-                  {/* Card */}
-                  <div
-                    className={`pl-14 md:pl-0 relative transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                      openIndex === index
-                        ? "md:w-full md:mx-auto z-20"
-                        : isLeft
-                        ? "md:mr-auto md:pr-8 md:w-[calc(50%-16px)]"
-                        : "md:ml-auto md:pl-8 md:w-[calc(50%-16px)]"
-                    }`}
-                  >
-                    <ScrollReveal>
-                      <AccordionCard
-                        fold={fold}
-                        isOpen={openIndex === index}
-                        onToggle={() => setOpenIndex(openIndex === index ? null : index)}
-                      />
-                    </ScrollReveal>
-                  </div>
-                </div>
-
+              {/* Card */}
+              <div className="pl-14 relative">
+                <ScrollReveal>
+                  <AccordionCard
+                    fold={fold}
+                    isOpen={openIndex === index}
+                    onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+                  />
+                </ScrollReveal>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

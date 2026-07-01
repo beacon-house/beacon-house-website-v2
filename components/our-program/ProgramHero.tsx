@@ -64,7 +64,6 @@ function ApplicationIllustration() {
 interface ComponentCardProps {
   title: string;
   gradeRange: string;
-  description: string;
   illustration: React.ReactNode;
   href: string;
 }
@@ -72,65 +71,94 @@ interface ComponentCardProps {
 function ComponentCard({
   title,
   gradeRange,
-  description,
   illustration,
   href,
 }: ComponentCardProps) {
   return (
-    <a href={href} className="group block">
-      <div className="relative bg-white rounded-xl overflow-hidden border border-[var(--bh-border-blue-gray)] shadow-[0_6px_20px_rgba(20,33,61,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(20,33,61,0.09)] h-full flex flex-col sm:flex-row">
-        {/* Image side */}
-        <div className="relative w-full sm:w-[40%] h-36 sm:h-auto sm:min-h-[180px] overflow-hidden bg-[var(--bh-soft-blue-mist)]/40">
-          <div className="absolute inset-0 scale-105 group-hover:scale-100 transition-transform duration-500">
-            {illustration}
-          </div>
-        </div>
-
-        {/* Content side */}
-        <div className="p-4 sm:p-5 flex flex-col flex-1 justify-center">
-          <span className="font-sans text-[0.65rem] sm:text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-slate-text)] mb-1.5">
-            {gradeRange}
-          </span>
-          <h3 className="font-serif font-medium text-[var(--bh-deep-ink)] text-[1.15rem] sm:text-[1.25rem] leading-tight mb-2">
-            {title}
-          </h3>
-          <p className="font-sans text-[var(--bh-slate-text)] text-[0.8rem] sm:text-[0.85rem] leading-[1.65] mb-4">
-            {description}
-          </p>
-          <div>
-            <span className="inline-flex items-center justify-center gap-1.5 bg-[var(--bh-deep-ink)] text-[var(--bh-warm-ivory)] font-sans font-semibold text-[0.78rem] sm:text-[0.82rem] px-4 py-2 rounded-lg transition-all duration-200 group-hover:bg-[var(--bh-navy)]">
-              Know More
-              <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </div>
-        </div>
+    <a
+      href={href}
+      className="group flex items-center gap-3.5 bg-white rounded-xl border border-[var(--bh-border-blue-gray)] shadow-[0_4px_14px_rgba(20,33,61,0.05)] p-4 sm:p-4.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(20,33,61,0.08)] active:scale-[0.99]"
+    >
+      <div className="relative shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden bg-[var(--bh-soft-blue-mist)]/60">
+        <div className="absolute inset-0 scale-125">{illustration}</div>
       </div>
+      <div className="flex-1 min-w-0">
+        <span className="font-sans text-[0.62rem] sm:text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-[var(--bh-slate-text)]">
+          {gradeRange}
+        </span>
+        <h3 className="font-serif font-medium text-[var(--bh-deep-ink)] text-[1rem] sm:text-[1.1rem] leading-snug">
+          {title}
+        </h3>
+      </div>
+      <svg className="shrink-0 w-4 h-4 text-[var(--bh-navy)] transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7" />
+      </svg>
     </a>
+  );
+}
+
+const journeySteps = [
+  { label: "Direction", phase: 1 },
+  { label: "Depth", phase: 1 },
+  { label: "Evidence", phase: 1 },
+  { label: "Positioning", phase: 2 },
+  { label: "Application", phase: 2 },
+] as const;
+
+function JourneyConnector() {
+  return (
+    <svg className="w-2 h-2 text-[var(--bh-warm-amber)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+function JourneySteps() {
+  return (
+    <div className="flex flex-wrap items-center gap-1.5 mb-5 md:mb-7">
+      {journeySteps.map((step, index) => {
+        const isLast = index === journeySteps.length - 1;
+        const isPhase2 = step.phase === 2;
+
+        return (
+          <span key={step.label} className="inline-flex items-center gap-1.5">
+            <span
+              className={`inline-flex items-center px-2.5 py-1.5 rounded-lg text-[0.62rem] sm:text-[0.65rem] font-sans font-semibold uppercase tracking-[0.08em] whitespace-nowrap ${
+                isPhase2
+                  ? "bg-[var(--bh-navy)] text-[var(--bh-warm-ivory)]"
+                  : "bg-white border border-[var(--bh-border-blue-gray)] text-[var(--bh-navy)]"
+              }`}
+            >
+              {step.label}
+            </span>
+            {!isLast && <JourneyConnector />}
+          </span>
+        );
+      })}
+    </div>
   );
 }
 
 export default function ProgramHero() {
   return (
     <section className="about-gradient-ivory relative w-full min-h-[100svh] flex flex-col justify-center overflow-hidden">
-      <div className="max-w-content mx-auto w-full px-6 pt-[88px] pb-12 md:px-8 md:pt-[80px] md:pb-10 lg:px-12 lg:pt-[82px] lg:pb-12">
-        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center gap-8 lg:gap-10">
+      <div className="max-w-content mx-auto w-full px-6 pt-[84px] pb-8 md:px-8 md:pt-[80px] md:pb-10 lg:px-12 lg:pt-[82px] lg:pb-12">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center gap-6 lg:gap-10">
           {/* Left: text content */}
           <div className="max-w-[600px] lg:max-w-none">
             <ScrollReveal>
-              <span className="inline-block font-sans text-[0.7rem] md:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-slate-text)] mb-2.5">
+              <span className="inline-block font-sans text-[0.7rem] md:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-slate-text)] mb-2">
                 Our Program
               </span>
-              <div className="w-8 h-0.5 bg-[var(--bh-warm-amber)] mb-5 md:mb-6" />
+              <div className="w-8 h-0.5 bg-[var(--bh-warm-amber)] mb-3.5 md:mb-6" />
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
               <h1
-                className="font-serif font-medium text-[var(--bh-deep-ink)] tracking-tight mb-5 md:mb-6"
+                className="font-serif font-medium text-[var(--bh-deep-ink)] tracking-tight mb-3.5 md:mb-6"
                 style={{
-                  fontSize: "clamp(1.85rem, 4.5vw, 2.85rem)",
-                  lineHeight: "1.12",
+                  fontSize: "clamp(1.7rem, 4.5vw, 2.85rem)",
+                  lineHeight: "1.14",
                 }}
               >
                 We{" "}
@@ -140,14 +168,18 @@ export default function ProgramHero() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <p className="font-sans text-[var(--bh-slate-text)] text-[0.92rem] md:text-[1.02rem] leading-[1.7] mb-6 md:mb-7 max-w-[520px]">
+              <p className="font-sans text-[var(--bh-slate-text)] text-[0.88rem] md:text-[1.02rem] leading-[1.6] md:leading-[1.7] mb-5 md:mb-7 max-w-[520px]">
                 Beacon House supports students across the years in which academic direction,
                 intellectual depth, leadership and evidence are formed — and then brings that
                 work together into the strongest possible university application.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={300}>
+            <ScrollReveal delay={260}>
+              <JourneySteps />
+            </ScrollReveal>
+
+            <ScrollReveal delay={340}>
               <a
                 href={CTA_URL}
                 target="_blank"
@@ -160,12 +192,11 @@ export default function ProgramHero() {
           </div>
 
           {/* Right: component cards */}
-          <div className="flex flex-col gap-4 md:gap-5">
+          <div className="flex flex-col gap-2.5 sm:gap-4 md:gap-5">
             <ScrollReveal delay={200}>
               <ComponentCard
                 title="Candidacy Building"
                 gradeRange="Grades 8 – 11"
-                description="We help the student identify direction, make better academic choices, develop depth and build credible evidence over time."
                 illustration={<CandidacyIllustration />}
                 href="#candidacy-building"
               />
@@ -175,16 +206,9 @@ export default function ProgramHero() {
               <ComponentCard
                 title="Application Counselling"
                 gradeRange="Grade 12"
-                description="We bring the student’s academic record, activities, evidence and personal story together into a coherent university strategy and application."
                 illustration={<ApplicationIllustration />}
                 href="#application-counselling"
               />
-            </ScrollReveal>
-
-            <ScrollReveal delay={400}>
-              <p className="text-center font-sans text-[var(--bh-slate-text)] text-[0.8rem] md:text-[0.85rem] mt-1 max-w-[420px] mx-auto">
-                The second phase is strongest when the first has been built deliberately.
-              </p>
             </ScrollReveal>
           </div>
         </div>
