@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { CTA_URL, CTA_LABEL } from "@/lib/constants";
+import { CTA_URL, CTA_LABEL, FOOTER_QUICK_LINKS } from "@/lib/constants";
 
 // Pages that already close with their own dedicated final-CTA section
 // immediately before the footer — showing the footer's CTA there too
@@ -39,6 +39,24 @@ export default function Footer() {
               Founder-supervised strategy, profile building, and candidacy
               development for selective universities.
             </p>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <h3 className="font-serif text-sm font-medium text-[var(--bh-warm-amber)] uppercase tracking-wider">
+              Quick Links
+            </h3>
+            <ul className="flex flex-col gap-2.5">
+              {FOOTER_QUICK_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="font-sans text-sm text-white/60 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {showCTA && (
