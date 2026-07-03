@@ -55,7 +55,7 @@ export default function TheQuestion() {
 
           {/* Not this, but that */}
           <ScrollReveal delay={400}>
-            <p className="font-sans text-white/35 text-[0.88rem] md:text-[0.95rem] leading-relaxed mb-2">
+            <p className="font-sans text-white/85 text-[0.88rem] md:text-[0.95rem] leading-relaxed mb-2">
               Not by building another large counselling company.
             </p>
             <p

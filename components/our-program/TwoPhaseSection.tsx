@@ -22,10 +22,10 @@ function PhaseCard({ eyebrow, title, meta, body, href }: PhaseCardProps) {
       <h3 className="font-serif font-medium text-[var(--bh-warm-ivory)] text-[1.25rem] md:text-[1.4rem] leading-tight mb-1.5">
         {title}
       </h3>
-      <p className="font-sans text-white/40 text-[0.72rem] md:text-[0.75rem] uppercase tracking-wide mb-4">
+      <p className="font-sans text-white/75 text-[0.72rem] md:text-[0.75rem] uppercase tracking-wide mb-4">
         {meta}
       </p>
-      <p className="font-sans text-white/70 text-[0.85rem] md:text-[0.9rem] leading-[1.65]">
+      <p className="font-sans text-white/90 text-[0.85rem] md:text-[0.9rem] leading-[1.65]">
         {body}
       </p>
     </a>
@@ -78,7 +78,7 @@ export default function TwoPhaseSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <p className="font-sans text-white/70 text-[0.92rem] md:text-[1.02rem] leading-[1.7]">
+            <p className="font-sans text-white/90 text-[0.92rem] md:text-[1.02rem] leading-[1.7]">
               Our program is designed around two connected phases.
             </p>
           </ScrollReveal>

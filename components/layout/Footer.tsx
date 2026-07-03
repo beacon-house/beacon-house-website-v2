@@ -34,7 +34,7 @@ export default function Footer() {
                 className="h-6 md:h-7 w-auto"
               />
             </div>
-            <p className="font-sans text-sm text-white/60 leading-relaxed">
+            <p className="font-sans text-sm text-white/85 leading-relaxed">
               Premium Ivy League admissions consultancy for Indian students.
               Founder-supervised strategy, profile building, and candidacy
               development for selective universities.
@@ -50,7 +50,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="font-sans text-sm text-white/60 hover:text-white transition-colors"
+                    className="font-sans text-sm text-white/80 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -77,10 +77,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <p className="font-sans text-xs text-white/40">
+          <p className="font-sans text-xs text-white/65">
             © {new Date().getFullYear()} Beacon House. All rights reserved.
           </p>
-          <p className="font-sans text-xs text-white/40">
+          <p className="font-sans text-xs text-white/65">
             In partnership with InGenius Prep — 150+ Former Admissions Officers
           </p>
         </div>

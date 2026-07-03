@@ -101,7 +101,7 @@ export default function HowModelWorks() {
         {/* Integrated journey */}
         <ScrollReveal delay={300}>
           <div className="text-center">
-            <p className="font-sans text-white/45 text-[0.82rem] md:text-[0.88rem] mb-5 md:mb-6">
+            <p className="font-sans text-white/85 text-[0.82rem] md:text-[0.88rem] mb-5 md:mb-6">
               Together, they support one integrated journey:
             </p>
 

@@ -44,17 +44,17 @@ function ComparisonCard({ item }: { item: ComparisonItem }) {
 
       <div className="relative h-px bg-white/10">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[var(--bh-deep-ink)] border border-white/15 flex items-center justify-center">
-          <span className="text-[0.65rem] font-semibold text-white/50 uppercase tracking-wider">
+          <span className="text-[0.65rem] font-semibold text-white/75 uppercase tracking-wider">
             VS
           </span>
         </div>
       </div>
 
       <div className="bg-[var(--bh-deep-ink)] px-5 py-5 md:px-7 md:py-6">
-        <span className="block font-sans text-[0.65rem] md:text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-white/30 mb-2">
+        <span className="block font-sans text-[0.65rem] md:text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-white/75 mb-2">
           {item.label}
         </span>
-        <p className="font-sans text-white/50 text-[0.95rem] md:text-[1.05rem] leading-relaxed">
+        <p className="font-sans text-white/90 text-[0.95rem] md:text-[1.05rem] leading-relaxed">
           {item.conventional}
         </p>
       </div>

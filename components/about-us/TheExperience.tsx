@@ -48,7 +48,7 @@ export default function TheExperience() {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <p className="font-sans text-white/50 text-[0.88rem] md:text-[0.95rem] leading-relaxed">
+            <p className="font-sans text-white/85 text-[0.88rem] md:text-[0.95rem] leading-relaxed">
               The partnership brings together experience spanning:
             </p>
           </ScrollReveal>
@@ -85,7 +85,7 @@ export default function TheExperience() {
                 className="flex items-center justify-center gap-3 text-center"
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-[var(--bh-warm-amber)]/60 flex-shrink-0" />
-                <span className="font-sans text-white/65 text-[0.85rem] md:text-[0.92rem] leading-snug">
+                <span className="font-sans text-white/90 text-[0.85rem] md:text-[0.92rem] leading-snug">
                   {item}
                 </span>
               </div>
@@ -99,7 +99,7 @@ export default function TheExperience() {
             <p className="font-serif font-medium text-[var(--bh-warm-ivory)] text-[1rem] md:text-[1.1rem] leading-snug mb-2.5">
               These resources create possibility.
             </p>
-            <p className="font-sans text-white/55 text-[0.9rem] md:text-[0.98rem] leading-[1.65]">
+            <p className="font-sans text-white/85 text-[0.9rem] md:text-[0.98rem] leading-[1.65]">
               The Beacon House model ensures that possibility is applied{" "}
               <span className="text-[var(--bh-warm-amber)] italic font-medium">
                 thoughtfully to each student

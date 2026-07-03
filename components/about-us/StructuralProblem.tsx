@@ -44,7 +44,7 @@ export default function StructuralProblem() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <p className="font-sans text-white/60 text-[0.92rem] md:text-[1.02rem] leading-[1.72] max-w-[480px]">
+              <p className="font-sans text-white/90 text-[0.92rem] md:text-[1.02rem] leading-[1.72] max-w-[480px]">
                 As counselling companies grow, they gain access to stronger
                 systems, larger teams and wider resources. But scale creates
                 pressure towards standardisation.
@@ -62,12 +62,11 @@ export default function StructuralProblem() {
                       ? "border-b border-white/[0.07]"
                       : ""
                   }`}
-                  style={{ opacity: 1 - i * 0.1 }}
                 >
                   <span className="font-serif text-[var(--bh-warm-amber)] text-[1.05rem] md:text-[1.15rem] font-medium flex-shrink-0 tabular-nums mt-[0.1rem]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="font-sans text-white/75 text-[0.9rem] md:text-[0.96rem] leading-[1.55]">
+                  <p className="font-sans text-white/90 text-[0.9rem] md:text-[0.96rem] leading-[1.55]">
                     {effect}
                   </p>
                 </div>
@@ -79,7 +78,7 @@ export default function StructuralProblem() {
         {/* Closing statement */}
         <ScrollReveal delay={800}>
           <div className="mt-12 md:mt-16 lg:mt-20 max-w-[680px] mx-auto text-center">
-            <p className="font-sans text-white/35 text-[0.86rem] md:text-[0.92rem] leading-relaxed mb-3">
+            <p className="font-sans text-white/85 text-[0.86rem] md:text-[0.92rem] leading-relaxed mb-3">
               The organisation may have impressive resources.
             </p>
             <p
