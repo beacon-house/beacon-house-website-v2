@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CTAAttribution from "@/components/shared/CTAAttribution";
 import { buildMetadata, organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -44,6 +45,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLd),
           }}
         />
+        <CTAAttribution />
         <Header />
         <main>{children}</main>
         <Footer />
