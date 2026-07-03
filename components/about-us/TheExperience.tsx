@@ -2,7 +2,7 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import CountUp from "@/components/shared/CountUp";
 
 const stats = [
-  { target: 620, prefix: "", suffix: "+", label: "Ivy League admits" },
+  { target: 730, prefix: "", suffix: "+", label: "Ivy League admits" },
   { target: 516, prefix: "", suffix: "", label: "Top 30 admits in 2025" },
   { target: 100, prefix: "", suffix: "+", label: "Admits to leading UK universities" },
   { target: 4, prefix: "$", suffix: "Mn+", label: "In scholarships" },

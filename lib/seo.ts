@@ -24,9 +24,9 @@ export function buildMetadata({
       type: "website",
       images: [
         {
-          url: "/bh-ig-logo.png",
-          width: 140,
-          height: 32,
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
           alt: "Beacon House",
         },
       ],
@@ -35,7 +35,7 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/bh-ig-logo.png"],
+      images: ["/og-image.png"],
     },
   };
 }
