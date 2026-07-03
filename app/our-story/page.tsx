@@ -9,17 +9,16 @@ import BeaconHouseValue from "@/components/about-us/BeaconHouseValue";
 import HowModelWorks from "@/components/about-us/HowModelWorks";
 import WhatThisMeans from "@/components/about-us/WhatThisMeans";
 import TheExperience from "@/components/about-us/TheExperience";
-import OurCommitment from "@/components/about-us/OurCommitment";
 import FinalCTA from "@/components/about-us/FinalCTA";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Beacon House: Premium Admissions Advisory for Indian Families",
+  title: "Our Story: Why Beacon House Was Created | Beacon House",
   description:
     "Beacon House was created to remove the trade-off between personal attention and world-class admissions resources. Founder-led judgement, global expertise, one student at a time.",
-  path: "/about-us",
+  path: "/our-story",
 });
 
-export default function AboutUsPage() {
+export default function OurStoryPage() {
   return (
     <>
       <WhyWeExist />
@@ -31,7 +30,6 @@ export default function AboutUsPage() {
       <HowModelWorks />
       <WhatThisMeans />
       <TheExperience />
-      <OurCommitment />
       <FinalCTA />
     </>
   );

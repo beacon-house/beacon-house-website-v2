@@ -7,3 +7,8 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/about-us"
+  to = "/our-story"
+  status = 301

@@ -2,10 +2,8 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 
 const resources = [
   "Former Admissions Officers",
-  "Global admissions intelligence",
   "Course and university specialists",
   "Research and domain mentors",
-  "Proven application systems",
   "Experience across thousands of admissions journeys",
 ];
 

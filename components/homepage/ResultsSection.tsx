@@ -1,10 +1,13 @@
 import Link from "next/link";
 
-const highlights = [
-  { value: "730+", label: "Cumulative Ivy League admits" },
-  { value: "159+", label: "Top 10 admits, 2025-26" },
-  { value: "100+", label: "Cumulative Top 5 UK admits" },
+const outcomes = [
+  { name: "Harvard", other: 3, ours: 15, multiplier: "4.3X" },
+  { name: "Oxford University", other: 9, ours: 29, multiplier: "3.2X" },
+  { name: "Cambridge University", other: 11, ours: 36, multiplier: "3.3X" },
+  { name: "MIT", other: 4, ours: 21, multiplier: "5.4X" },
 ];
+
+const getOtherBarWidth = (value: number) => `${Math.max(value, 10)}%`;
 
 export default function ResultsSection() {
   return (
@@ -32,7 +35,7 @@ export default function ResultsSection() {
             </h2>
 
             <p className="font-sans text-[var(--bh-slate-text)] text-[0.95rem] md:text-[1rem] leading-[1.7] mb-7 md:mb-8 max-w-[520px]">
-              Class of 2029 offers and five-year cumulative admits across the
+              2025-26 final offers and five-year cumulative admits across the
               most selective universities in the US, UK, and beyond. The work
               begins long before the application year.
             </p>
@@ -51,22 +54,58 @@ export default function ResultsSection() {
             </Link>
           </div>
 
-          {/* Right — highlight stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[var(--bh-border-blue-gray)] border border-[var(--bh-border-blue-gray)] rounded-xl overflow-hidden">
-            {highlights.map((stat) => (
+          {/* Right — success-rate bar comparators */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+            {outcomes.map((outcome) => (
               <div
-                key={stat.label}
-                className="bg-white px-6 py-7 md:px-7 md:py-8 flex flex-col"
+                key={outcome.name}
+                className="bg-white border border-[var(--bh-border-blue-gray)] rounded-xl px-6 py-6 md:px-7 md:py-7"
               >
-                <p
-                  className="font-serif font-medium text-[var(--bh-navy)] tabular-nums leading-none mb-3"
-                  style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)" }}
-                >
-                  {stat.value}
-                </p>
-                <p className="font-sans text-[var(--bh-slate-text)] text-[0.8rem] md:text-[0.85rem] leading-[1.5]">
-                  {stat.label}
-                </p>
+                <h3 className="font-serif font-medium text-[var(--bh-deep-ink)] text-[1.15rem] md:text-[1.25rem] leading-tight mb-5">
+                  {outcome.name}
+                </h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-sans text-[var(--bh-slate-text)] text-[0.85rem]">
+                        Other Students
+                      </span>
+                      <span className="font-sans font-semibold text-[var(--bh-deep-ink)] text-[0.85rem]">
+                        {outcome.other} out of 100
+                      </span>
+                    </div>
+                    <div className="h-3 w-full rounded-full bg-[var(--bh-border-blue-gray)]/70 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-[var(--bh-slate-text)]"
+                        style={{ width: getOtherBarWidth(outcome.other) }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-sans text-[var(--bh-slate-text)] text-[0.85rem]">
+                        Our Students
+                      </span>
+                      <span className="font-sans font-semibold text-[var(--bh-navy)] text-[0.85rem]">
+                        {outcome.ours} out of 100
+                      </span>
+                    </div>
+                    <div className="h-2.5 w-full rounded-full bg-[var(--bh-border-blue-gray)]/70 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-[var(--bh-warm-amber)]"
+                        style={{ width: `${outcome.ours}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pt-1 text-center">
+                    <span className="inline-flex items-center justify-center rounded-full border border-[var(--bh-border-blue-gray)] bg-[var(--bh-soft-blue-mist)] px-4 py-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-[var(--bh-navy)]">
+                      {outcome.multiplier} Higher Success Rate
+                    </span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

@@ -45,9 +45,9 @@ export default function GlobalResources() {
                 lineHeight: "1.15",
               }}
             >
-              Global scale at the resource layer.{" "}
+              The world&apos;s best resources.{" "}
               <span className="text-[var(--bh-warm-amber)] italic">
-                Deliberate intimacy at the decision layer.
+                Combined with deliberate intimacy.
               </span>
             </h2>
           </ScrollReveal>

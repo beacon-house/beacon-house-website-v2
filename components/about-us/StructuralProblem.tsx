@@ -45,9 +45,9 @@ export default function StructuralProblem() {
 
             <ScrollReveal delay={200}>
               <p className="font-sans text-white/90 text-[0.92rem] md:text-[1.02rem] leading-[1.72] max-w-[480px]">
-                As counselling companies grow, they gain access to stronger
-                systems, larger teams and wider resources. But scale creates
-                pressure towards standardisation.
+                As counselling companies grow, they gain access to wider
+                resources. But scale creates pressure towards
+                standardisation.
               </p>
             </ScrollReveal>
           </div>
@@ -88,11 +88,7 @@ export default function StructuralProblem() {
                 lineHeight: "1.25",
               }}
             >
-              Yet the student can still become{" "}
-              <span className="text-[var(--bh-warm-amber)] italic">
-                lost within the system
-              </span>
-              .
+              Yet the student&apos;s chances may not improve materially.
             </p>
           </div>
         </ScrollReveal>

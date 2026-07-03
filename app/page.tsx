@@ -20,9 +20,9 @@ export default function HomePage() {
       />
       <HeroSection />
       <EarlyYearsSection />
-      <WhyDifferentSection />
       <HowWeBuildSection />
       <JourneySection />
+      <WhyDifferentSection />
       <ResultsSection />
       <FinalCTASection />
       <FAQSection />

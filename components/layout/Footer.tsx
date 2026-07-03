@@ -7,7 +7,7 @@ import { CTA_URL, CTA_LABEL, FOOTER_QUICK_LINKS } from "@/lib/constants";
 // Pages that already close with their own dedicated final-CTA section
 // immediately before the footer — showing the footer's CTA there too
 // would just repeat the same button the reader saw one scroll above.
-const PATHS_WITH_OWN_FINAL_CTA = ["/about-us", "/our-results", "/our-program"];
+const PATHS_WITH_OWN_FINAL_CTA = ["/our-story", "/our-results", "/our-program"];
 
 function hasOwnFinalCTA(pathname: string) {
   return (

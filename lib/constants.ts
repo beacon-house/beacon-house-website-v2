@@ -4,7 +4,7 @@ export const CTA_LABEL = "Request a Strategic Review";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about-us" },
+  { label: "Our Story", href: "/our-story" },
   { label: "Our Program", href: "/our-program" },
   { label: "Our Results", href: "/our-results" },
   { label: "Case Studies", href: "/case-studies" },

@@ -37,7 +37,7 @@ export default function WhyWeExist() {
             {/* Eyebrow */}
             <ScrollReveal>
               <span className="inline-block font-sans text-[0.7rem] md:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-slate-text)] mb-2.5">
-                Why We Exist
+                Why Beacon House Was Created
               </span>
               <div className="w-8 h-0.5 bg-[var(--bh-warm-amber)] mb-6 md:mb-7" />
             </ScrollReveal>

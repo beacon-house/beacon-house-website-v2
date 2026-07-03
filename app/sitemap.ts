@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/about-us`,
+      url: `${SITE_URL}/our-story`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

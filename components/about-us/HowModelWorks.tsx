@@ -51,7 +51,7 @@ export default function HowModelWorks() {
                 lineHeight: "1.15",
               }}
             >
-              We scale the resources.{" "}
+              We bring proven resources.{" "}
               <span className="text-[var(--bh-warm-amber)] italic">
                 We personalise the decisions.
               </span>
