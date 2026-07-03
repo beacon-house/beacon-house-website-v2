@@ -18,7 +18,7 @@ export default function ResultsHero() {
           </h1>
           <div className="w-10 h-[2px] bg-[var(--bh-warm-amber)] mx-auto mt-7 md:mt-8 mb-5 md:mb-6" />
           <p className="font-sans text-[var(--bh-slate-text)] text-[1rem] md:text-[1.1rem] leading-[1.7]">
-            Class of 2029 offers and five-year cumulative admits across the
+            2025-26 final offers and five-year cumulative admits across the
             most selective universities in the US, UK, and beyond.
           </p>
         </div>

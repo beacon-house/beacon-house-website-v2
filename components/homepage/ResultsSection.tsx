@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const highlights = [
-  { value: "730+", label: "Cumulative Ivy League admits" },
+  { value: "730+", label: "Cumulative Ivy League admits" },
   { value: "159+", label: "Top 10 admits, 2025-26" },
   { value: "100+", label: "Cumulative Top 5 UK admits" },
 ];

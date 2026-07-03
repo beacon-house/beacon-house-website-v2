@@ -38,12 +38,12 @@ const grades = [
 function GradeIcon({ src }: { src: string | null }) {
   if (src) {
     return (
-      <Image src={src} alt="" width={20} height={20} className="w-5 h-5" />
+      <Image src={src} alt="" width={28} height={28} className="w-7 h-7" />
     );
   }
   return (
     <svg
-      className="w-5 h-5"
+      className="w-7 h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="var(--bh-navy)"
@@ -86,7 +86,7 @@ function TimelineCard({
       }`}
     >
       <div className="absolute -top-3 -left-3 z-10">
-        <div className="w-11 h-11 rounded-full bg-[var(--bh-warm-ivory)] border border-[var(--bh-border-blue-gray)] flex items-center justify-center shadow-sm">
+        <div className="w-14 h-14 rounded-full bg-[var(--bh-warm-ivory)] border border-[var(--bh-border-blue-gray)] flex items-center justify-center shadow-sm">
           <GradeIcon src={icon} />
         </div>
       </div>

@@ -8,23 +8,6 @@ export default function TransformationSection({ study }: TransformationSectionPr
   return (
     <section className="w-full bg-[var(--bh-warm-ivory)]">
       <div className="max-w-content mx-auto w-full px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
-        <div className="text-center mb-10 md:mb-14">
-          <span className="inline-block font-sans text-[0.7rem] md:text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--bh-slate-text)] mb-2 md:mb-2.5">
-            The Transformation
-          </span>
-          <div className="w-8 h-0.5 bg-[var(--bh-warm-amber)] mx-auto mb-3 md:mb-4" />
-          <h2
-            className="font-serif font-medium text-[var(--bh-deep-ink)] tracking-tight max-w-[720px] mx-auto"
-            style={{
-              fontSize: "clamp(1.75rem, 3.8vw, 2.75rem)",
-              lineHeight: "1.1",
-            }}
-          >
-            From {study.before.subtitle.toLowerCase()} to{" "}
-            <span className="text-[var(--bh-navy)]">{study.after.subtitle.toLowerCase()}</span>.
-          </h2>
-        </div>
-
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0">
           {/* Central path line - visible on lg */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">

@@ -1,6 +1,6 @@
 import { CTA_URL, CTA_LABEL } from "@/lib/constants";
 
-const qualifiers = ["IB & IGCSE focused", "Grades 8 to 11", "International aiming"];
+const qualifiers = ["IB & IGCSE focused", "Grades 8 to 12", "International aiming"];
 
 export default function FinalCTASection() {
   return (
@@ -20,7 +20,7 @@ export default function FinalCTASection() {
         </h2>
 
         <p className="font-sans text-[var(--bh-warm-ivory)]/70 text-[0.9rem] md:text-[1rem] leading-relaxed max-w-[640px] mx-auto mt-4 mb-6">
-          If your child is in IB or IGCSE Grades 8 to 11 and aiming
+          If your child is in IB or IGCSE Grades 8 to 12 and aiming
           internationally, this is the right time to assess whether the current
           path is compounding in the right direction.
         </p>

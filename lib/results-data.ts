@@ -16,7 +16,7 @@ export const resultTables: ResultTable[] = [
   {
     id: "us-universities",
     kicker: "US Universities",
-    caption: "Class of 2029 offers and five-year cumulative admits",
+    caption: "2025-26 final offers and five-year cumulative admits",
     rows: [
       { rank: "1", institution: "Princeton University", offers: 8, fiveYearTotal: 27 },
       { rank: "2", institution: "Massachusetts Institute of Technology", offers: 6, fiveYearTotal: 41 },
@@ -54,7 +54,7 @@ export const resultTables: ResultTable[] = [
   {
     id: "liberal-arts",
     kicker: "Liberal Arts Colleges",
-    caption: "Class of 2029 offers and five-year cumulative admits",
+    caption: "2025-26 final offers and five-year cumulative admits",
     rows: [
       { rank: "1", institution: "Williams College", offers: 2, fiveYearTotal: 12 },
       { rank: "2", institution: "Amherst College", offers: 1, fiveYearTotal: 10 },
@@ -65,7 +65,7 @@ export const resultTables: ResultTable[] = [
   {
     id: "uk-universities",
     kicker: "UK Universities",
-    caption: "Class of 2029 offers and five-year cumulative admits",
+    caption: "2025-26 final offers and five-year cumulative admits",
     rows: [
       { rank: "1", institution: "University of Cambridge", offers: 2, fiveYearTotal: 6 },
       { rank: "5", institution: "Imperial College, London", offers: 2, fiveYearTotal: 22 },
@@ -76,7 +76,7 @@ export const resultTables: ResultTable[] = [
   {
     id: "art-design",
     kicker: "Art and Design Schools",
-    caption: "Class of 2029 offers and five-year cumulative admits",
+    caption: "2025-26 final offers and five-year cumulative admits",
     rows: [
       { rank: "★", institution: "Pratt Institute", offers: 6, fiveYearTotal: 20 },
       { rank: "★", institution: "Savannah College of Art and Design", offers: 4, fiveYearTotal: 6 },

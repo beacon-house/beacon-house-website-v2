@@ -2,7 +2,7 @@ import CountUp from "@/components/shared/CountUp";
 import { CTA_URL, CTA_LABEL } from "@/lib/constants";
 
 const stats = [
-  { target: 730, prefix: "", suffix: "+", label: "Cumulative Ivy League Admits" },
+  { target: 730, prefix: "", suffix: "+", label: "Cumulative Ivy League Admits" },
   { target: 159, prefix: "", suffix: "+", label: "Top 10 Admits In 2025-26" },
   { target: 100, prefix: "", suffix: "+", label: "Cumulative Top 5 UK Admits" },
   { target: 4, prefix: "$", suffix: "Mn+", label: "In Scholarships" },

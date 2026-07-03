@@ -4,7 +4,7 @@ import type { ResultTable as ResultTableType } from "@/lib/results-data";
 const HEADER_LABELS = {
   rank: "Rank",
   institution: "University",
-  offers: "Class of 2029",
+  offers: "2025-26 Offers",
   total: "5 Year Total",
 };
 

@@ -1,19 +1,23 @@
 const highlights = [
   {
-    value: "112",
+    value: "500+",
+    label: "High School Seniors",
+  },
+  {
+    value: "108+",
     label: "Ivy League Offers",
   },
   {
-    value: "950",
-    label: "Top 50 Offers",
+    value: "159+",
+    label: "Top 10 Offers",
   },
   {
-    value: "90%",
-    label: "Reach School Acceptance for Grades 8 & 9 Students",
+    value: "384+",
+    label: "Top 20 Offers",
   },
   {
-    value: "+10%",
-    label: "Top School More Likely with Additional Yr of Our Program",
+    value: "574+",
+    label: "Top 30 Offers",
   },
 ];
 
@@ -37,7 +41,7 @@ export default function ResultsHighlights() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4">
           {highlights.map((stat) => (
             <div
               key={stat.label}
