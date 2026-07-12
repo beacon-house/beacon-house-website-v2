@@ -3,7 +3,6 @@ import { buildMetadata } from "@/lib/seo";
 import WhyWeExist from "@/components/about-us/WhyWeExist";
 import StructuralProblem from "@/components/about-us/StructuralProblem";
 import TheTradeOff from "@/components/about-us/TheTradeOff";
-import LeadershipTeam from "@/components/about-us/LeadershipTeam";
 import TheQuestion from "@/components/about-us/TheQuestion";
 import GlobalResources from "@/components/about-us/GlobalResources";
 import BeaconHouseValue from "@/components/about-us/BeaconHouseValue";
@@ -25,7 +24,6 @@ export default function OurStoryPage() {
       <WhyWeExist />
       <StructuralProblem />
       <TheTradeOff />
-      <LeadershipTeam />
       <TheQuestion />
       <GlobalResources />
       <BeaconHouseValue />
